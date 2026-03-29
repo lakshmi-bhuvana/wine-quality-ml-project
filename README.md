@@ -2,74 +2,67 @@
 
 ## 📌 Project Overview
 
-This project focuses on predicting wine quality using Machine Learning techniques. The dataset contains physicochemical properties of wine, and the objective is to classify wines as **Good** or **Bad** based on their quality score.
+This project predicts wine quality using Machine Learning techniques. Based on various physicochemical properties, the model classifies wine as **Good** or **Bad**.
 
 ---
 
 ## 🎯 Objective
 
-* Analyze the Wine Quality dataset
-* Perform data preprocessing and feature engineering
-* Train and evaluate multiple ML models
+* Perform data analysis on the Wine Quality dataset
+* Build and evaluate multiple ML models
 * Compare model performance
-* Improve results using feature scaling and hyperparameter tuning
+* Improve accuracy using feature scaling and hyperparameter tuning
 
 ---
 
 ## 📊 Dataset
 
-* Wine Quality Dataset
+The dataset contains chemical properties of wine such as:
 
-* Input features include:
+* Fixed Acidity
+* Volatile Acidity
+* Citric Acid
+* Residual Sugar
+* Chlorides
+* Free Sulfur Dioxide
+* Total Sulfur Dioxide
+* Density
+* pH
+* Sulphates
+* Alcohol
 
-  * Fixed Acidity
-  * Volatile Acidity
-  * Citric Acid
-  * Residual Sugar
-  * Chlorides
-  * Free Sulfur Dioxide
-  * Total Sulfur Dioxide
-  * Density
-  * pH
-  * Sulphates
-  * Alcohol
+### 🎯 Target Variable
 
-* Target variable:
+* `quality` → original score
+* `quality_label` → created column
 
-  * `quality` (original score)
-
-* Created target:
-
-  * `quality_label`
-
-    * **1 (Good)** → Quality ≥ 7
-    * **0 (Bad)** → Quality < 7
+  * **1 (Good)** → Quality ≥ 7
+  * **0 (Bad)** → Quality < 7
 
 ---
 
 ## ⚙️ Workflow
 
-1. Data Loading using Pandas
-2. Data Exploration (`head()`, `info()`, `describe()`)
-3. Checking Missing Values
-4. Correlation Analysis
-5. Feature Engineering (Binary Classification)
-6. Train-Test Split
-7. Model Training:
+1. Data Loading and Exploration (`head()`, `info()`, `describe()`)
+2. Checking Missing Values
+3. Correlation Analysis
+4. Feature Engineering (Binary Target Creation)
+5. Train-Test Split
+6. Model Training:
 
-   * Logistic Regression (before scaling)
-   * Logistic Regression (after scaling)
+   * Logistic Regression (without scaling)
+   * Logistic Regression (with scaling)
    * K-Nearest Neighbors (KNN)
    * Decision Tree
-8. Model Evaluation:
+7. Model Evaluation:
 
    * Accuracy
    * Precision
    * Recall
    * F1-score
    * Confusion Matrix
-9. Hyperparameter Tuning using GridSearchCV
-10. Feature Importance Analysis
+8. Hyperparameter Tuning using GridSearchCV
+9. Feature Importance Analysis
 
 ---
 
@@ -84,8 +77,8 @@ This project focuses on predicting wine quality using Machine Learning technique
 ## 📈 Results
 
 * Feature scaling improved Logistic Regression performance
-* KNN and Decision Tree performed better due to their ability to capture non-linear relationships
-* Important features influencing wine quality:
+* KNN and Decision Tree performed better due to non-linear relationships
+* Key features affecting wine quality:
 
   * Alcohol
   * Sulphates
@@ -104,7 +97,7 @@ This project focuses on predicting wine quality using Machine Learning technique
 
 ---
 
-## 📊 Project Structure
+## 📁 Project Structure
 
 wine-quality-ml-project/
 │
@@ -114,9 +107,60 @@ wine-quality-ml-project/
 
 ---
 
+## 📥 How to Clone and Run the Project
+
+### 🔹 Clone Repository
+
+```bash
+git clone https://github.com/lakshmi-bhuvana/wine-quality-ml-project.git
+```
+
+### 🔹 Navigate to Folder
+
+```bash
+cd wine-quality-ml-project
+```
+
+### 🔹 Install Dependencies
+
+```bash
+pip install numpy pandas scikit-learn matplotlib seaborn
+```
+
+### 🔹 Run the Project
+
+#### Option 1: Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```
+wine_quality_prediction.ipynb
+```
+
+#### Option 2: Google Colab
+
+* Open Google Colab
+* Upload notebook file
+* Upload dataset
+* Run all cells
+
+---
+
+## 📊 Output
+
+* Model performance metrics (Accuracy, Precision, Recall, F1-score)
+* Confusion Matrix
+* Feature Importance graph
+
+---
+
 ## 📌 Conclusion
 
-This project demonstrates the importance of preprocessing, feature scaling, and model selection in Machine Learning. It also highlights how different algorithms perform on the same dataset and how tuning improves model performance.
+This project highlights the importance of data preprocessing, feature scaling, and model selection in Machine Learning. It also demonstrates how different algorithms perform on the same dataset.
 
 ---
 
@@ -124,12 +168,10 @@ This project demonstrates the importance of preprocessing, feature scaling, and 
 
 * Use advanced models like Random Forest or XGBoost
 * Perform deeper feature engineering
-* Deploy the model using a web application
+* Deploy the model as a web application
 
 ---
 
 ## 👤 Author
 
 Lakshmi Bhuvana Durvasula
-
-
